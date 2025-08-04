@@ -1,17 +1,19 @@
-public class pyramid{
+import java.util.Scanner;
+
+class pyramid {
     public static void main(String[] args) {
-        int i, j, k;
-        for (i = 1; i <= 5; i++) {
-            
-            for (j = 4; j >= i; j--) {
-                System.out.print(" ");
-            }
-           
-            for (k = 1; k <= (2 * i - 1); k++) {
-                System.out.print("*");
-            }
-         
-            System.out.println();
-        }
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b= scan.nextInt();
+        int c= scan.nextInt();
+        int max = a;
+         if(b>max){
+            max=b;
+         }
+         if(c>max){
+            max=c;
+         }
+         System.out.println(max);
+
     }
 }
