@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class main {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Your Name : ");
-        String name = sc.nextLine();
-        System.out.println("hello " + name  );
-
+class main{
+    public static void main(String[] args) {
+      char[] arr = {'a','b','c','d','s'};
+      for(int i = 1; i<arr.length;i+=2){
+          arr[i] = Character.toUpperCase(arr[i]);
+          System.out.println(arr);
+      }
     }
 }

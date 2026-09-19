@@ -1,0 +1,117 @@
+Problem Statement : In a large-scale real-time performance monitoring system used by a global tech company, millions of sensor readings are collected every second. Each reading represents the performance metric of a server at a particular moment in time. Engineers are especially interested in identifying performance peaks — moments when a server’s performance is strictly better than its immediate neighbors. These peaks often indicate optimal operating conditions or critical transition points in the system.
+
+Due to the massive scale of data, scanning every value linearly would be inefficient. The system must use an optimized algorithm that can identify any one peak efficiently, ensuring fast diagnostics and minimal processing overhead. A performance peak is defined as an element that is strictly greater than its adjacent elements.
+
+Your task is to help the monitoring system detect any one peak element from the given performance data.
+
+Rules for Peak Detection
+
+A peak element is an element that is greater than its neighbors
+For the first element, only the right neighbor is considered
+For the last element, only the left neighbor is considered
+There is always at least one peak in the array
+You may return the index of any peak
+The solution must be optimized and preferably use binary search
+
+
+Input
+
+An integer n representing the number of performance readings
+An integer array nums of size n representing performance values
+
+
+Output
+
+Return the index of any peak element
+
+
+
+Constraints
+
+1 <= nums.length <= 1000
+-
+2
+31
+2
+31
+  = nums[i] <=
+2
+31
+−
+1
+2
+31
+ −1
+nums[i] != nums[i + 1] for all valid i
+
+
+Examples:
+
+
+
+Example 1
+
+Input
+
+n = 4
+
+nums = 1 2 3 1
+
+Output
+
+2
+
+Explanation
+
+Element 3 at index 2 is greater than both its neighbors (2 and 1), so it is a peak.
+
+
+
+Example 2
+
+Input
+
+n = 3
+
+nums = 1 2 1
+
+Output
+
+1
+
+Explanation
+
+Element 2 is strictly greater than its adjacent elements, making it a valid peak.
+
+
+
+Example 3
+
+Input
+
+n = 1
+
+nums = 10
+
+Output
+
+0
+
+Explanation
+
+A single element is always considered a peak.
+
+
+Sample Input 1:
+
+4
+
+1 2 3 1
+
+
+Sample Output 1:
+
+2
+
+
+
