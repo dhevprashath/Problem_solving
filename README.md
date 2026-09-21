@@ -1,2 +1,2 @@
-JS practicing 
-src = JAVA
+JS practicing \n
+src = JAVA Tutorial
